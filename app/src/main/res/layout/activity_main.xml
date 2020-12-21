@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_add_new_todo"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="3dp"
+        android:text="add"
+        android:textSize="15dp"
+        android:onClick="addItem"
+        android:theme="@style/DarkGreenButtonTheme" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_reset"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="3dp"
+        android:text="reset"
+        android:textSize="15dp"
+        android:onClick="reset"
+        android:theme="@style/DarkRedButtonTheme" />
+
+    <TextView
+        android:id="@+id/titleTop"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="211dp"
+        android:text="To-Do List"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/button_add_new_todo"
+        android:layout_toLeftOf="@+id/button_add_new_todo"
+        android:hint="Enter an item to the list"/>
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="403dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_add_new_todo"
+        android:layout_below="@+id/button_reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:divider="@color/white"
+        android:gravity="center"/>
+
+</RelativeLayout>
